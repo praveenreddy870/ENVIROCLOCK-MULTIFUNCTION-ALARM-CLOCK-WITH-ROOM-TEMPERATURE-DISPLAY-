@@ -28,35 +28,55 @@ LCD, LEDs, Keypad, RTC, ADC (LM35), and External Interrupt are initialized befor
 
 ###  Main Loop Operations:
 1.Continuously read current date & time from RTC and display on LCD along with the day.
+
 2.Read room temperature using LM35 sensor via ADC and display it on LCD.
+
 3.Check if current time = alarm time → Activate buzzer.
+
 4.Alarm stops when the user presses alarm stop button; otherwise auto-stops after 1 minute.
 
 ###  RTC Correction Using Interrupt:
 
 ● A dedicated switch triggers an external interrupt if RTC time is incorrect.
+
 ● Normal operation pauses; LCD shows a menu with:
+
       1.Edit RTC Info
       2.Set Alarm
       3.Exit
 
 ###  Editing RTC Information:
       ● Selecting EDIT RTC INFO shows a submenu to modify:
+      
          ● Hours
+         
          ● Minutes
+         
          ● Seconds
+         
          ● Day
+         
          ● Date
+         
          ● Month
+         
          ● Year
+         
          ● Exit
       ● User enters values using keypad.
+      
       ● System validates:
+      
          ● Hours (0–23)
+
          ● Min/Sec (0–59)
+         
          ● Date (1–31 depending on month & leap year)
+         
          ● Month (1–12)
+         
       ● Invalid inputs → Error message + retry.
+      
       ● Valid inputs → RTC registers updated; LCD confirms update.
 
 ###  Setting the Alarm:
