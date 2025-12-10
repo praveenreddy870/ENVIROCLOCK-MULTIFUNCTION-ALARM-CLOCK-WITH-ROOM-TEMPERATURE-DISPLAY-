@@ -41,9 +41,11 @@ LCD, LEDs, Keypad, RTC, ADC (LM35), and External Interrupt are initialized befor
 
 ● Normal operation pauses; LCD shows a menu with:
 
-      1.Edit RTC Info
-      2.Set Alarm
-      3.Exit
+     1. Edit RTC Info
+     
+     2. Set Alarm
+     
+     3. Exit
 
 ###  Editing RTC Information:
       ● Selecting EDIT RTC INFO shows a submenu to modify:
